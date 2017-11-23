@@ -3,6 +3,7 @@ package com.hendisantika.carrestservice.domain;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 /**
  * Created by IntelliJ IDEA.
