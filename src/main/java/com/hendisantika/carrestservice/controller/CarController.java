@@ -1,4 +1,4 @@
-package com.hendisantika.carrestservice;
+package com.hendisantika.carrestservice.controller;
 
 import com.hendisantika.carrestservice.domain.Car;
 import com.hendisantika.carrestservice.repository.CarRepository;
