@@ -1,12 +1,16 @@
 package com.hendisantika.carrestservice.controller;
 
 import com.hendisantika.carrestservice.domain.Car;
-import com.hendisantika.carrestservice.projection.Brand;
 import com.hendisantika.carrestservice.repository.CarRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.data.domain.Pageable;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by IntelliJ IDEA.
@@ -36,7 +40,7 @@ public class CarController {
     }
 
     @GetMapping("/brand")
-    List<Brand> getBrandOnly(@RequestParam("brand") String b) {
-        return carRepository.findDistinctByBrand(b);
+    List<Map<String, String>> getBrandOnly(Pageable pageable) {
+        return carRepository.getBrand(pageable);
     }
 }
