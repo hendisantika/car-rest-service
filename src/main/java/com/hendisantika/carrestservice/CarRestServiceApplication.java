@@ -24,7 +24,7 @@ public class CarRestServiceApplication {
 			repository.save(new Car("Audi", "A3", "Black", "A95", 2014));
 			repository.save(new Car("Toyota", "Auris", "Black", "A95", 2013));
 			repository.save(new Car("Toyota", "Avensis", "White", "Diesel", 2015));
-			repository.save(new Car("Nissan", "Micra", "", "A95", 2015));
+            repository.save(new Car("Nissan", "Micra", "Purple", "A95", 2015));
 			repository.save(new Car("Nissan", "X-Trail", "Blue", "Diesel", 2016));
 		};
 	}
