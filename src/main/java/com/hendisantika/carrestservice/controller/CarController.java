@@ -1,9 +1,12 @@
 package com.hendisantika.carrestservice.controller;
 
 import com.hendisantika.carrestservice.domain.Car;
+import com.hendisantika.carrestservice.projection.Brand;
 import com.hendisantika.carrestservice.repository.CarRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * Created by IntelliJ IDEA.
@@ -30,5 +33,10 @@ public class CarController {
     @GetMapping("/{id}")
     Car getCar(@PathVariable("id") String id){
         return carRepository.findOne(Long.parseLong(id));
+    }
+
+    @GetMapping("/brand")
+    List<Brand> getBrandOnly(@RequestParam("brand") String b) {
+        return carRepository.findDistinctByBrand(b);
     }
 }
