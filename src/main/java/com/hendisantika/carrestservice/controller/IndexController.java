@@ -23,6 +23,6 @@ public class IndexController {
 
     @GetMapping("")
     public String index(){
-        return "Hello World " + new Date();
+        return "Hello World!<br>Cars REST API -  " + new Date();
     }
 }
