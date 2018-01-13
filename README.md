@@ -23,3 +23,5 @@ Find Car by Id
 Distinct Car by Brand & Color
 
 `http://localhost:8080/api/cars/brand`
+
+![Distinct Car by Brand & Color Page](img/brand.png "Distinct Car by Brand & Color Page")
