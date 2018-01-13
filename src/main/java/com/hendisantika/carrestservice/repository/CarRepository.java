@@ -1,11 +1,13 @@
 package com.hendisantika.carrestservice.repository;
 
 import com.hendisantika.carrestservice.domain.Car;
-import com.hendisantika.carrestservice.projection.Brand;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by IntelliJ IDEA.
@@ -28,9 +30,10 @@ public interface CarRepository extends CrudRepository<Car, Long> {
 
     List<Car> findByYear(@Param("year") int year);
 
-    //    @Query("SELECT DISTINCT c.brand as brand from Car c")
-//    List<String> getBrand();
+    @Query("SELECT DISTINCT c.brand as brand, c.color as color from Car c")
+    List<Map<String, String>> getBrand(Pageable pageable);//    List<String> getBrand();
+//    List<Brand> getBrand();
 //    Collection<BrandOnly> getBrand();
-    List<Brand> findDistinctByBrand(String brand);
+//    List<Brand> findDistinctByBrand(String brand);
 
 }
