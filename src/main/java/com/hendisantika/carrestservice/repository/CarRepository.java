@@ -31,9 +31,6 @@ public interface CarRepository extends CrudRepository<Car, Long> {
     List<Car> findByYear(@Param("year") int year);
 
     @Query("SELECT DISTINCT c.brand as brand, c.color as color from Car c")
-    List<Map<String, String>> getBrand(Pageable pageable);//    List<String> getBrand();
-//    List<Brand> getBrand();
-//    Collection<BrandOnly> getBrand();
-//    List<Brand> findDistinctByBrand(String brand);
+    List<Map<String, String>> getBrand(Pageable pageable);
 
 }
