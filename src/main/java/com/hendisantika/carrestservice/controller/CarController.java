@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 /**
  * Created by IntelliJ IDEA.
@@ -35,8 +36,8 @@ public class CarController {
     }
 
     @GetMapping("/{id}")
-    Car getCar(@PathVariable("id") String id){
-        return carRepository.findOne(Long.parseLong(id));
+    Optional<Car> getCar(@PathVariable("id") String id) {
+        return carRepository.findById(Long.parseLong(id));
     }
 
     @GetMapping("/brand")
