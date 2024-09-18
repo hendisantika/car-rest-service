@@ -1,9 +1,9 @@
 package com.hendisantika.carrestservice.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 /**
  * Created by IntelliJ IDEA.
@@ -22,18 +22,18 @@ public class Car {
     @GeneratedValue(strategy= GenerationType.AUTO)
     private long id;
     private String brand, model, color, fuel;
-    private int year;
+    private int tahun;
 
     public Car() {
     }
 
-    public Car(String brand, String model, String color, String fuel, int year) {
+    public Car(String brand, String model, String color, String fuel, int tahun) {
         super();
         this.brand = brand;
         this.model = model;
         this.color = color;
         this.fuel = fuel;
-        this.year = year;
+        this.tahun = tahun;
     }
 
     public long getId() {
@@ -76,11 +76,11 @@ public class Car {
         this.fuel = fuel;
     }
 
-    public int getYear() {
-        return year;
+    public int getTahun() {
+        return tahun;
     }
 
-    public void setYear(int year) {
-        this.year = year;
+    public void setTahun(int tahun) {
+        this.tahun = tahun;
     }
 }
