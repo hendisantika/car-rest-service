@@ -28,9 +28,9 @@ import java.util.Optional;
 @RequestMapping("/api/cars")
 public class CarController {
     @Autowired
-    CarRepository carRepository;
+    private CarRepository carRepository;
 
-    @GetMapping("")
+    @GetMapping
     Iterable<Car> getCars(){
         return carRepository.findAll();
     }
