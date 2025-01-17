@@ -22,6 +22,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+      with:
+        lfs: true  # gradle-wrapper.jar verification will fail without this
     - name: Set up JDK 21
       uses: actions/setup-java@v4
       with:
